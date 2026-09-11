@@ -3,6 +3,6 @@
   "private": true,
   "description": "CoAP (RFC 7252) message wire codec, with RFC 7959 block-wise transfer, in portable .cljc",
   "scripts": {
-    "test:cljs": "nbb --classpath \"$(clojure -A:cljs -Spath)\" scripts/verify-cljs.cljs"
+    "test:cljs": "nbb --classpath \"$(clojure -A:cljs -Spath)\" scripts/verify-cljs.cljk"
   }
 }
