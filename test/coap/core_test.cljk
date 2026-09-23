@@ -9,7 +9,7 @@
   spec, and are marked `constructed, not a published spec vector` at the
   point they're used, per this workspace's honesty requirement for test
   data."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [coap.code :as code]
             [coap.options :as opt]
             [coap.message :as msg]

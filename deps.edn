@@ -3,7 +3,12 @@
 ;; anything beyond core Clojure, and pulling in a CoAP client/server
 ;; library to write a codec would defeat the point, which is a codec this
 ;; workspace's other runtimes (cljs, nbb) can load without a JVM.
-{:paths ["src"]
+{:deps {
+        ;; kotoba.test (clojure.test-compatible surface), not clojure.test --
+        ;; scripts/migrate-clojure-test-to-kotoba-test.cljk. Explicit floor.
+        io.github.kotoba-lang/test {:git/url "https://github.com/kotoba-lang/test.git"
+                                    :git/sha "2ab4885f99fd25552d380d0f6b0b54c5a72eb7ae"}}
+ :paths ["src"]
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {io.github.cognitect-labs/test-runner
